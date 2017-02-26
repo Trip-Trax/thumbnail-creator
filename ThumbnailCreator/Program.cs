@@ -1,14 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using OpenQA.Selenium;
-using System.IO;
-using OpenQA.Selenium.Chrome;
 using System.Drawing;
-using System.Threading;
 
 namespace ThumbnailCreator {
     class Program {
@@ -32,7 +26,11 @@ namespace ThumbnailCreator {
         }
 
         static void Main(string[] args) {
-            CoreDriver driver = new CoreDriver();
+            Package pckg = new Package();
+
+            Console.ReadKey();
+
+            /*CoreDriver driver = new CoreDriver();
 
             driver.Initialize();
 
@@ -52,7 +50,7 @@ namespace ThumbnailCreator {
 
             TakeScreenShots(chromeInstance, parsedBodyElements);
 
-            chromeInstance.Quit();
+            chromeInstance.Quit();*/
         }
     }
 }

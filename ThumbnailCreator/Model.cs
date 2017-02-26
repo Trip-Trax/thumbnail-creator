@@ -78,7 +78,7 @@ namespace ThumbnailCreator {
         public string _architecture { get; set; }
     }
 
-    public class RootObject {
+    public class BuilifyTemplateManifest {
         public string name { get; set; }
         public Core core { get; set; }
         public External external { get; set; }
