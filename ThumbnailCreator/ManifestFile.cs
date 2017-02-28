@@ -1,11 +1,12 @@
 ﻿using System;
-using System.IO;
 using System.Runtime.Serialization.Json;
 using System.Text;
+using ThumbnailCreator.Model;
+using ThumbnailCreator.Configuration;
 
 namespace ThumbnailCreator {
     public class ManifestFile {
-        private static readonly string ManifestFilePath = Configuration.ManifestFileName;
+        private static readonly string ManifestFilePath = Config.ManifestFileName;
         private static BuilifyTemplateManifest File { get; set; }
 
         public BuilifyTemplateManifest Get() {
@@ -17,14 +18,14 @@ namespace ThumbnailCreator {
         }
 
         private static string GetManifestFileData() {
-            string data = string.Empty;
+            var data = string.Empty;
 
             try {
                 if (System.IO.File.Exists(ManifestFilePath)) {
                     data = System.IO.File.ReadAllText(ManifestFilePath);
                 }
             } catch (Exception ex) {
-                throw ex;
+                Console.WriteLine(ex.ToString());
             }
 
             return data;

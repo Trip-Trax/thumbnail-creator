@@ -1,5 +1,5 @@
-﻿namespace ThumbnailCreator {
-    public sealed class Configuration {
+﻿namespace ThumbnailCreator.Configuration {
+    public class Config {
         public static string ManifestFileName = "manifest.json";
     }
 }

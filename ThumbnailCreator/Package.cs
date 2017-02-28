@@ -1,15 +1,16 @@
 ﻿using System;
 using System.IO;
-using System.Runtime.Serialization.Json;
-using System.Text;
-using ICSharpCode.SharpZipLib.Core;
-using ICSharpCode.SharpZipLib.Zip;
+using ThumbnailCreator.Model;
+using ThumbnailCreator.Configuration;
+using OpenQA.Selenium;
+using System.Collections.Generic;
+using System.Drawing.Imaging;
 
 namespace ThumbnailCreator {
     public class Package {
-       
+        private static string packagePath = @"C:\Users\Genert\Desktop\Projects\trip-trax\arkio\builder\arkio.builify.js";
         private const string MagicWord = "var __BUILIFY_TEMPLATE = ";
-        private static string tempPackagePath = @"temp.zip";
+        private const string tempPackagePath = @"temp.zip";
 
         public Package() {
             LoadPackage();
@@ -20,7 +21,7 @@ namespace ThumbnailCreator {
             var realPackage = GetContentData(text);
 
             Zip.CreatePackage(tempPackagePath, realPackage);
-            Zip.ExtractFile(tempPackagePath, Configuration.ManifestFileName);
+            Zip.ExtractFile(tempPackagePath, Config.ManifestFileName);
 
             ManifestFile manifest = new ManifestFile();
             BuilifyTemplateManifest result = manifest.Get();
@@ -28,11 +29,7 @@ namespace ThumbnailCreator {
             Console.WriteLine(result.name);
             Console.WriteLine(result.version);
 
-            foreach (Block block in result.blocks) {
-                foreach (Item item in block.items) {
-                    Console.WriteLine(item.title);
-                }
-            }
+            Screenshots.Take(result);
         }
 
         private string GetPackageData() {

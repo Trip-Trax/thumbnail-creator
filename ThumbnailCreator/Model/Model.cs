@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ThumbnailCreator {
+namespace ThumbnailCreator.Model {
     public class Core {
         public string javascript { get; set; }
         public string stylesheet { get; set; }
