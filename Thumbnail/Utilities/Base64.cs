@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ThumbnailCreator.Utilities {
+namespace Thumbnail.Utilities {
     class Base64 {
         public static byte[] Decode(string data) {
             return Convert.FromBase64String(data);

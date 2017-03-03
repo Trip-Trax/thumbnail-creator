@@ -1,16 +1,17 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
+using Thumbnail.Configuration;
 
-namespace ThumbnailCreator {
+namespace Thumbnail {
     public class CoreDriver {
-        private OpenQA.Selenium.IWebDriver _driver;
+        private IWebDriver _driver;
 
-        private string _defaultProfileDir = @"C:\Users\Genert\AppData\Local\Google\Chrome\User Data\Default";
+        private readonly string _defaultProfileDir = Config.ChromeBrowserUserProfilePath;
 
         public void Initialize() {
-            ChromeOptions options = new ChromeOptions();
-            ChromeDriverService service = ChromeDriverService.CreateDefaultService();
+            var options = new ChromeOptions();
+            var service = ChromeDriverService.CreateDefaultService();
 
             Console.WriteLine($"user-data-dir={_defaultProfileDir}");
 

@@ -2,9 +2,10 @@
 using System.IO;
 using OpenQA.Selenium;
 using System.Collections.Generic;
-using ThumbnailCreator.Model;
+using Thumbnail.Model;
+using Thumbnail.Configuration;
 
-namespace ThumbnailCreator {
+namespace Thumbnail {
     public class BlockElement {
         public IWebElement Element { get; set; } = null;
         public string FileName { get; set; } = string.Empty;
@@ -17,7 +18,7 @@ namespace ThumbnailCreator {
             foreach (var block in elements) {
                 var elementImage = Element.GetScreenshot(driver, block.Element);
                 var blockFileName = Path.GetFileName(block.FileName);
-                var imageFileName = @"C:\Users\Genert\Desktop\test\" + $"{blockFileName}";
+                var imageFileName = Config.ImagesTargetPath + $"{blockFileName}";
 
                 elementImage.Save(imageFileName, System.Drawing.Imaging.ImageFormat.Jpeg);
             }

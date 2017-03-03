@@ -2,9 +2,9 @@
 using ICSharpCode.SharpZipLib.Zip;
 using System;
 using System.IO;
-using ThumbnailCreator.Utilities;
+using Thumbnail.Utilities;
 
-namespace ThumbnailCreator {
+namespace Thumbnail {
     public class Zip {
         public static void CreatePackage(string path, string data) {
             try {

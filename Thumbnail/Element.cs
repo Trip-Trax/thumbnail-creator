@@ -3,9 +3,9 @@ using System.Drawing;
 using System.IO;
 using System.Threading;
 using OpenQA.Selenium.Interactions;
-using ThumbnailCreator.Utilities;
+using Thumbnail.Utilities;
 
-namespace ThumbnailCreator {
+namespace Thumbnail {
     public static class Element {
         public static Bitmap CropAtRect(this Bitmap b, Rectangle r) {
             var nb = new Bitmap(r.Width, r.Height);
