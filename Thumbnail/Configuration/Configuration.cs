@@ -1,4 +1,5 @@
 ﻿namespace Thumbnail.Configuration {
+    // TODO: Solve MacOSX paths
     public class Config {
         public static string ManifestFileName = "manifest.json";
         public static string PackagePath = @"C:\Users\Genert\Desktop\Projects\trip-trax\arkio\builder\arkio.builify.js";
