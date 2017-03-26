@@ -15,3 +15,6 @@ Thumbs.db
 
 # ZIP files
 .zip
+
+# Editor crap
+.idea

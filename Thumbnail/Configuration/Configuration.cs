@@ -1,4 +1,5 @@
 ﻿namespace Thumbnail.Configuration {
+    // TODO: Solve MacOSX paths
     public class Config {
         public static string Server = "http://localhost:3000/";
         public static string ManifestFileName = "manifest.json";
