@@ -1,9 +1,8 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using OpenQA.Selenium;
 using System.Collections.Generic;
-using Thumbnail.Model;
 using Thumbnail.Configuration;
+using Builify.Models.TemplateManifest;
 
 namespace Thumbnail {
     public class BlockElement {
@@ -42,11 +41,11 @@ namespace Thumbnail {
         }
 
         private static void InitializeBrowser(IWebDriver driver) {
-            driver.Navigate().GoToUrl("http://localhost:3000/");
+            driver.Navigate().GoToUrl(Config.Server);
             driver.Manage().Window.Maximize();
         }
 
-        public static void Take(BuilifyTemplateManifest manifestObject) {
+        public static void Take(TemplateManifest manifestObject) {
             _driver = new CoreDriver();
             _driver.Initialize();
 

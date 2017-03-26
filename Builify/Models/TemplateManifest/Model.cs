@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Thumbnail.Model {
+namespace Builify.Models.TemplateManifest {
     public class Core {
         public string javascript { get; set; }
         public string stylesheet { get; set; }
@@ -78,7 +78,7 @@ namespace Thumbnail.Model {
         public string _architecture { get; set; }
     }
 
-    public class BuilifyTemplateManifest {
+    public class TemplateManifest {
         public string name { get; set; }
         public Core core { get; set; }
         public External external { get; set; }

@@ -6,8 +6,9 @@ using Thumbnail.Configuration;
 namespace Thumbnail {
     public class CoreDriver {
         private IWebDriver _driver;
-
         private readonly string _defaultProfileDir = Config.ChromeBrowserUserProfilePath;
+
+        public IWebDriver Driver => _driver;
 
         public void Initialize() {
             var options = new ChromeOptions();
@@ -20,7 +21,5 @@ namespace Thumbnail {
 
             _driver = new ChromeDriver(service, options, TimeSpan.FromMinutes(5));
         }
-
-        public IWebDriver Driver => _driver;
     }
 }

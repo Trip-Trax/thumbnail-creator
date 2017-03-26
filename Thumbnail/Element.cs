@@ -1,7 +1,6 @@
 ﻿using OpenQA.Selenium;
 using System.Drawing;
 using System.IO;
-using System.Threading;
 using OpenQA.Selenium.Interactions;
 using Thumbnail.Utilities;
 
@@ -14,20 +13,15 @@ namespace Thumbnail {
             return nb;
         }
 
-        private static void SleepASecond() {
-            Thread.Sleep(1000);
-        }
-
         public static Bitmap GetScreenshot(IWebDriver driver, IWebElement element) {
             var viewportWidth = (int)(long)((IJavaScriptExecutor)driver).ExecuteScript("return document.body.clientWidth");
             var actions = new Actions(driver);
+            var elementHeight = element.Size.Height;
 
             actions.MoveToElement(element);
             actions.Perform();
 
-            var elementHeight = element.Size.Height;
-
-            SleepASecond();
+            Timer.Sleep(1000);
 
             var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
             var image = Image.FromStream(new MemoryStream(screenshot.AsByteArray)) as Bitmap;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using Thumbnail.Configuration;
+using Builify;
 
 namespace Thumbnail {
     public class Core {
@@ -19,8 +20,7 @@ namespace Thumbnail {
             Zip.CreatePackage(_tempPackagePath, realPackage);
             Zip.ExtractFile(_tempPackagePath, Config.ManifestFileName);
 
-            var manifest = new ManifestFile();
-            var result = manifest.Get();
+            var result = Files.GetTemplateManifest(Config.ManifestFileName);
 
             Console.WriteLine(result.name);
             Console.WriteLine(result.version);

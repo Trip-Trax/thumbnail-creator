@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Software", "test\Software.c
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thumbnail", "Thumbnail\Thumbnail.csproj", "{E6E3EEB1-B34B-4F77-9CAB-793DD386E97E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builify", "Builify\Builify.csproj", "{B4D95BFE-1051-4F2D-B203-5A3D651BE62A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E6E3EEB1-B34B-4F77-9CAB-793DD386E97E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6E3EEB1-B34B-4F77-9CAB-793DD386E97E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6E3EEB1-B34B-4F77-9CAB-793DD386E97E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4D95BFE-1051-4F2D-B203-5A3D651BE62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4D95BFE-1051-4F2D-B203-5A3D651BE62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4D95BFE-1051-4F2D-B203-5A3D651BE62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4D95BFE-1051-4F2D-B203-5A3D651BE62A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -90,6 +90,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Builify\Builify.csproj">
+      <Project>{b4d95bfe-1051-4f2d-b203-5a3d651be62a}</Project>
+      <Name>Builify</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Thumbnail\Thumbnail.csproj">
       <Project>{e6e3eeb1-b34b-4f77-9cab-793dd386e97e}</Project>
       <Name>Thumbnail</Name>
