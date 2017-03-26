@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 
-namespace Thumbnail.Utilities {
+namespace Utilities {
     public static class ImageProcessingUtility {
         public static Bitmap ScaleImage(Image image, int maxWidth, int maxHeight) {
             var ratioX = (double)maxWidth / image.Width;

@@ -58,9 +58,6 @@
     <Compile Include="Package.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Screenshots.cs" />
-    <Compile Include="Utilities\Base64.cs" />
-    <Compile Include="Utilities\Image.cs" />
-    <Compile Include="Utilities\Timer.cs" />
     <Compile Include="Zip.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +67,10 @@
     <ProjectReference Include="..\Builify\Builify.csproj">
       <Project>{b4d95bfe-1051-4f2d-b203-5a3d651be62a}</Project>
       <Name>Builify</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{ab18f32e-6183-4102-abdd-4dc27daf3fc2}</Project>
+      <Name>Utilities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

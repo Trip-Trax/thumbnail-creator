@@ -2,7 +2,7 @@
 using ICSharpCode.SharpZipLib.Zip;
 using System;
 using System.IO;
-using Thumbnail.Utilities;
+using Utilities;
 
 namespace Thumbnail {
     public class Zip {

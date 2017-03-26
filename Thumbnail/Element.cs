@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.IO;
 using OpenQA.Selenium.Interactions;
-using Thumbnail.Utilities;
+using Utilities;
 
 namespace Thumbnail {
     public static class Element {
