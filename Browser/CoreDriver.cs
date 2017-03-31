@@ -1,14 +1,22 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
-using Thumbnail.Configuration;
 
-namespace Thumbnail {
+namespace Browser {
     public class CoreDriver {
         private IWebDriver _driver;
-        private readonly string _defaultProfileDir = Config.ChromeBrowserUserProfilePath;
+        private string _defaultProfileDir = string.Empty;
 
-        public IWebDriver Driver => _driver;
+        public CoreDriver(string path) {
+            _defaultProfileDir = path;
+            Initialize();
+        }
+
+        public IWebDriver Driver {
+            get {
+                return _driver;
+            }
+        }
 
         public void Initialize() {
             var options = new ChromeOptions();

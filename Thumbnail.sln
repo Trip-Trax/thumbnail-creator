@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builify", "Builify\Builify.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{AB18F32E-6183-4102-ABDD-4DC27DAF3FC2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Browser", "Browser\Browser.csproj", "{93A79817-F95D-4651-AE4C-BD5071FB116E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AB18F32E-6183-4102-ABDD-4DC27DAF3FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB18F32E-6183-4102-ABDD-4DC27DAF3FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB18F32E-6183-4102-ABDD-4DC27DAF3FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93A79817-F95D-4651-AE4C-BD5071FB116E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93A79817-F95D-4651-AE4C-BD5071FB116E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93A79817-F95D-4651-AE4C-BD5071FB116E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93A79817-F95D-4651-AE4C-BD5071FB116E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

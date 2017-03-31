@@ -2,6 +2,7 @@
 using System.IO;
 using Thumbnail.Configuration;
 using Builify;
+using Utilities;
 
 namespace Thumbnail {
     public class Core {
@@ -14,22 +15,34 @@ namespace Thumbnail {
         }
 
         private void LoadPackage() {
-            var text = GetPackageData();
+            var text = GetPackageDataAndReturnNullOnError();
+
+            if (string.IsNullOrEmpty(text)) {
+                return;
+            }
+
             var realPackage = GetContentData(text);
 
             Zip.CreatePackage(_tempPackagePath, realPackage);
             Zip.ExtractFile(_tempPackagePath, Config.ManifestFileName);
 
-            var result = Files.GetTemplateManifest(Config.ManifestFileName);
+            var manifest = Files.GetTemplateManifest(Config.ManifestFileName);
 
-            Console.WriteLine(result.name);
-            Console.WriteLine(result.version);
+            Console.WriteLine(manifest.name);
+            Console.WriteLine(manifest.version);
 
-            Screenshots.Take(result);
+            Screenshots.Take(manifest);
         }
 
-        private string GetPackageData() {
-            var text = File.ReadAllText(_packagePath);
+        private string GetPackageDataAndReturnNullOnError() {
+            var text = string.Empty;
+
+            try {
+                text = File.ReadAllText(_packagePath);
+            } catch (FileNotFoundException e) {
+                Console.WriteLine($"'{e.FileName}' not found.");
+            }
+
             return text;
         }
 
